@@ -1,9 +1,27 @@
 import React from 'react';
 
-import { TextField } from '@unit/components';
+import { InputAdornment, TextField } from '@unit/components';
 
 export const Home: React.FC = () => (
     <div>
-        <TextField label="Label" />
+        <TextField
+            label="Label"
+            InputProps={{
+                startAdornment: (
+                    <InputAdornment
+                        position="start"
+                    >
+                        start
+                    </InputAdornment>
+                ),
+                endAdornment: (
+                    <InputAdornment
+                        position="end"
+                    >
+                        end
+                    </InputAdornment>
+                ),
+            }}
+        />
     </div>
 );
