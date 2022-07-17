@@ -49,6 +49,19 @@ module.exports = {
         // Enforce a convention in module import order
         // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md
         'import/order': ['warn', {
+            pathGroups: [
+                {
+                    pattern: 'react',
+                    group: 'builtin',
+                    position: 'after',
+                },
+                {
+                    pattern: '@unit/**',
+                    group: 'internal',
+                    position: 'after',
+                },
+            ],
+            pathGroupsExcludedImportTypes: [],
             groups: ['builtin', 'external', 'parent', 'sibling', 'internal', 'index', 'object'],
             'newlines-between': 'always',
         }],
@@ -63,9 +76,18 @@ module.exports = {
 
         // Ensure consistent use of file extension within the import path
         // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/extensions.md
-        'import/extensions': ['error', { ts: 'always', tsx: 'always' }],
+        'import/extensions': ['error', { ts: 'always', tsx: 'always', json: 'always' }],
 
         // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-unresolved.md
         'import/no-unresolved': 'off',
+
+        // Disallow JSX props spreading
+        // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
+        'react/jsx-props-no-spreading': ['error', {
+            html: 'enforce',
+            custom: 'ignore',
+            explicitSpread: 'ignore',
+            exceptions: [],
+        }],
     },
 };
