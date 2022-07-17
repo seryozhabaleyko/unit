@@ -23,6 +23,7 @@
     "baseUrl": "src",
     "paths": {
         "@unit/components": ["components"],
+        "@unit/icons": ["icons"],
         "@unit/modules": ["modules"],
         "@unit/theming": ["theming"]
     }
