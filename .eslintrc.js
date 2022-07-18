@@ -87,7 +87,7 @@ module.exports = {
             html: 'enforce',
             custom: 'ignore',
             explicitSpread: 'ignore',
-            exceptions: [],
+            exceptions: ['svg'],
         }],
 
         // Validate props indentation in JSX

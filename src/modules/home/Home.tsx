@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { InputAdornment, TextField } from '@unit/components';
+import { Swap } from '@unit/icons';
 
 export const Home: React.FC = () => (
     <div>
@@ -23,5 +24,6 @@ export const Home: React.FC = () => (
                 ),
             }}
         />
+        <Swap />
     </div>
 );
