@@ -8,5 +8,5 @@ export const InputLabelSC = styled.label`
     line-height: 1.5;
     letter-spacing: 0.01em;
   
-    color: ${(props) => props.theme.palette.grey[70]}
+    color: ${(props) => props.theme.palette.grey[70]};
 `;

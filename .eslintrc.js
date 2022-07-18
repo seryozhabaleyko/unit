@@ -89,5 +89,9 @@ module.exports = {
             explicitSpread: 'ignore',
             exceptions: [],
         }],
+
+        // Validate props indentation in JSX
+        // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
+        'react/jsx-indent-props': ['error', 4],
     },
 };
