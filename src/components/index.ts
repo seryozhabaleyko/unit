@@ -4,3 +4,4 @@ export * from './InputLabel';
 export * from './TextField';
 export * from './InputAdornment';
 export * from './SvgIcon';
+export * from './ButtonBase';
